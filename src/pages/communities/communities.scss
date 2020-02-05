@@ -1,0 +1,100 @@
+page-communities {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .pageTitle{
+        font-size: 22px;
+        // margin-bottom: 0px;
+    }
+    .communitiesContent{
+        ion-card{
+            margin: 3px auto;
+            margin-bottom: 30px;
+            width: 96%;
+            box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.15);
+            ion-card-header, ion-card-content{
+                padding: 0px;
+            }
+            ion-card-header{
+                position: relative;
+                overflow: visible;
+                span{
+                    position: absolute;
+                    bottom: -15px;
+                    right: 20px;
+                    width: auto;
+                    height: 30px;
+                    padding: 0px 4px;
+                    line-height: 30px;
+                    border-radius: 15px;
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-size: 13px;
+                    background: #8f1336;
+                }
+            }
+            ion-card-content{
+                padding: 20px 10px 3px 10px;
+                // text-align: left;
+                .cafeLogo{
+                    width: 100px;
+                    height: 60px;
+                    border: 1px solid #ccc;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #fff;
+                    position: relative;
+                    margin-top: -30px;
+                    margin-bottom: 12px;
+                    img{
+                        object-fit: contain;
+                        width: auto;
+                        height: auto;
+                        max-width: 98%;
+                        max-height: 94%;
+                    }
+                }
+                h2{
+                    color: #424242;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                } 
+                p{
+                    margin: 8px 0px 0px 0px;
+                    font-size: 14px;
+                    color: #444;
+                }
+            }
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

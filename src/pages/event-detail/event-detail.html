@@ -1,0 +1,41 @@
+<common-header  noMenu="false" title="{{detailData.name}}"></common-header>
+
+<ion-content class="eventDetailContent">
+  <ion-card class="detailCard">
+    <div class="eventImgDiv">
+      <img src="{{detailData.image}}" />
+      <span>{{detailData.status}}</span>
+    </div>
+    <ion-card-content>
+      <ion-item>
+        <h5 class="eventDate">{{detailData.startDate}} - {{detailData.endDate}}</h5>
+        <h5>{{detailData.type}}</h5>
+        <h2>{{detailData.name}}</h2>
+        <h5>{{detailData.startTime}} - {{detailData.endTime}}</h5>
+        <h3>
+          <ion-icon name="pin"></ion-icon> {{detailData.location}}
+        </h3>
+        <p>{{detailData.desc}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="md-calendar"></ion-icon>
+        <span>Schedule</span>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="md-calendar"></ion-icon>
+        <span>Add to calender</span>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="pin"></ion-icon>
+        <span>Take me There</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button ion-button block color="danger" class="statusBtn" (click)="status()">{{detailData.status}}</button>
+</ion-footer>

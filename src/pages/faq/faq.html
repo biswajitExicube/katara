@@ -1,0 +1,12 @@
+<common-header  noMenu="false"></common-header>
+
+<ion-content class="faqContent">
+  <h2 class="pageTitle">{{'faqs' | translate}}</h2>
+  <p *ngIf="faqList.length==0" class="blankDataText">This content is under editing..</p>
+</ion-content>
+<ion-footer>
+  <button ion-button block class="filterBtn" [ngClass]="filterOpen==true?'btnActive':''" (click)="filterBtnClick()">
+    <ion-icon name="ios-funnel"></ion-icon>
+    Questions Filters
+  </button>
+</ion-footer>

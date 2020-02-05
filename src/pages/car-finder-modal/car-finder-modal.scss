@@ -1,0 +1,33 @@
+page-car-finder-modal {
+    .modalContent{
+        background: rgba(0, 0, 0, 0.3);
+        .coverPage{
+            position: absolute;
+            z-index: 222;
+            width: 100%;
+            height: 100%;
+        } 
+        .modalCard{
+            background: none;
+            width: calc( 100% - 32px );
+            margin: 0px auto;
+            box-shadow: none;
+            position: relative;
+            z-index: 444;
+            ion-item{
+                height: auto;
+                padding-left: 0px;
+                ion-textarea{
+                    resize: none;
+                }
+            }
+            button{
+                background: #8f1336;
+                color: #fff;
+                text-transform: capitalize;
+                margin-top: 8px;
+                height: 42px;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<common-header  noMenu="false"></common-header>
+
+<ion-content class="newsContent">
+  <h2 class="pageTitle">{{'featuredNews' | translate}}</h2>
+  <ion-card class="featuredNewsCard">
+    <ion-card-content>
+      <ion-slides pager #Slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide class="newsItem" *ngFor="let news of featuredNewsList; let i=index" (click)="forDetails(news, featuredNewsList)">
+          <img src="{{news.image}}" alt="Image">
+          <h2>{{news.title}}</h2>
+          <h4>{{news.date}}</h4>
+          <p>{{news.description}}</p>
+        </ion-slide>
+      </ion-slides>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="allNewsCard">
+    <h3>{{'searchAllNews' | translate}}</h3>
+    <ion-card-header>
+      <div class="searchInput">
+        <ion-input placeholder="{{'search' |  translate}}"></ion-input>
+        <button><ion-icon name="search"></ion-icon></button>
+      </div>
+      <button ion-button class="showAllBtn">{{'showAll' | translate}}</button>
+    </ion-card-header>
+    <ion-card-content class="newsItem" *ngFor="let news of featuredNewsList; let i=index" (click)="forDetails(news, featuredNewsList)">
+        <img src="{{news.image}}" alt="Image">
+        <h2>{{news.title}}</h2>
+        <h4>{{news.date}}</h4>
+        <p>{{news.description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

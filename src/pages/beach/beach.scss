@@ -1,0 +1,132 @@
+page-beach {
+  ion-content{
+    top: 56px;
+    height: calc( 100% - 56px );
+  }
+  .pageTitle{
+      font-size: 22px;
+      margin-bottom: 0px;
+  }
+  .pageDesc{
+      font-size: 13px;
+      line-height: 22px;
+      margin-bottom: 10px;
+  }
+  .swiper-container {
+      width: 100%;
+      height: 100%;
+  }
+  .swiper-slide {
+    overflow: hidden;
+  }
+  .beachContent{
+    .segemntTag{
+      justify-content: flex-start;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      ion-segment-button{
+        border: none;
+        text-transform: capitalize;
+        color: #444;
+        font-size: 16px;
+        font-weight: 600;
+        width: auto;
+        flex: initial;
+        padding: 0px 6px;
+        border-radius: 0px !important;
+        border-right: 1px solid #ccc !important;
+        margin-right: 3px !important;
+        &.segment-activated{
+          background: #8f1336;
+          color: #fff;
+        }
+        &:first-child{
+          border-left: none !important;
+        }
+      }
+    }
+    .activityCard{
+      width: 100%;
+      margin: 0px auto;
+      margin-top: 15px;
+      box-shadow: none;
+      ion-card-content{
+        padding: 0px;
+        margin-bottom: 30px;
+        h3{
+          font-size: 16px;
+          color: #b74e0f;
+          margin: 8px 0px;
+          font-weight: 600;
+        }
+        p{
+          line-height: 22px;
+          color: #444;
+        }
+        h5{
+          font-size: 14px;
+          color: #444;
+          border-bottom: 1px dashed #ccc;
+          padding: 5px 0;
+          &:last-child{
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .quickLinkList{
+      margin-top: 6vh;
+      padding-bottom: 3vh;
+      border-bottom: 1px solid #ccc;
+      ion-list-header{
+        border-top: none;
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 0px;
+        ion-label{
+          font-family: 'Museo-300-Regular';
+      }
+      }
+      ion-item{
+        font-size: 14px;
+        min-height: auto;
+        ion-label{
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: #222;
+            font-weight: bold;
+            border-bottom: 1px dashed #444 !important;
+            padding-bottom: 3px;
+        }
+      }
+    }
+  }
+  @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

@@ -1,0 +1,93 @@
+page-home {
+    ion-header{
+        .toolbar-ios ion-title{
+            padding: 0px 15px 0px 60px;
+        }
+    }
+    .homeContent{
+        .flexDiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .eventSlider{
+            ion-slide{
+                align-items: flex-start;
+                .slide-zoom{
+                    height: calc( 100% - 56px );
+                }
+            }
+        }
+        .eventCard{
+            width: 100%;
+            height: 100%;
+            margin: 0px auto;
+            box-shadow: none;
+            border-radius: 0px;
+            ion-card-content{
+                padding: 0px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                ion-item{
+                    .item-inner{
+                        ion-label{
+                            white-space: normal;
+                        }
+                    }
+                }
+                .eventDate{
+                    background: #8f1336;
+                    display: inline-block;
+                    color: #fff;
+                    padding: 4px 2px;
+                }
+                h5{
+                    font-size: 12px;
+                }
+                h2{
+                    font-size: 22px;
+                    color: #8f1336;
+                    margin: 10px 0;
+                    // font-weight: 600;
+                }
+                h3{
+                    color: #444;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-family: 'Museo-300-Regular';
+                    ion-icon{
+                        color: #8f1336;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 6px;
+                        font-size: 22px;
+                    }
+                }
+                p{
+                    color: #444;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin: 10px 0px 0px 0px;
+                }
+                .eventImageDiv{
+                    position: relative;
+                    span{
+                        background: #8f1336;
+                        display: inline-block;
+                        color: #fff;
+                        font-size: 13px;
+                        padding: 4px 6px;
+                        border-radius: 20px;
+                        position: absolute;
+                        top: -6px;
+                        right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

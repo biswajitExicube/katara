@@ -1,0 +1,67 @@
+<common-header noMenu="false"></common-header>
+<ion-content class="beachContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <div style="padding: 16px;">
+    <h2 class="pageTitle">{{'kataraBeach' | translate}}</h2>
+    <p class="pageDesc">One of the most beautiful natural beaches of Qatar, Katara's private beach spans over 15km.
+      Beach goers have a choice between enjoying a relaxed beach experience and diving into the fun with a great variety
+      of adrenaline-boosting beach activities.</p>
+    <ion-segment [(ngModel)]="beachOption" class="segemntTag">
+      <ion-segment-button value="aboutBeach">
+        {{'about' | translate}}
+      </ion-segment-button>
+      <ion-segment-button value="activityBeach">
+        {{'beachActivities' | translate}}
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="beachOption">
+      <div *ngSwitchCase="'aboutBeach'">
+        <ion-slides class="imageSlides" loop="true" pager slidesPerView="1" [dir]="changeDir? 'rtl':'ltr'">
+          <ion-slide *ngFor="let beach of beachImages">
+            <img src="{{beach.image}}" class="thumb-img" imageViewer />
+          </ion-slide>
+        </ion-slides>
+        <ion-card class="activityCard">
+          <ion-card-content *ngFor="let beach of beachImages">
+            <img src="{{beach.image}}" class="thumb-img" />
+            <h3>{{beach.title}}</h3>
+            <p>{{beach.desc}}</p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" *ngFor="let img of beachImages">
+            <div class="swiper-zoom-container">
+              <img src="{{img}}" class="thumb-img">
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination --
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Navigation --
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div> -->
+      </div>
+
+      <ion-list *ngSwitchCase="'activityBeach'">
+        <ion-card class="activityCard">
+          <ion-card-content *ngFor="let beach of beachActivites">
+            <img src="{{beach.image}}" class="thumb-img" />
+            <h3>{{beach.title}}</h3>
+            <h5>{{beach.time}}</h5>
+            <h5>{{beach.name}}</h5>
+            <h5>Rate : {{beach.rate}}</h5>
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+    </div>
+  </div>
+  <ion-list class="quickLinkList" no-lines>
+    <ion-list-header>Related Links</ion-list-header>
+    <ion-item>Water Sports Activities</ion-item>
+    <ion-item>Female dress code regulations</ion-item>
+    <ion-item>Male dress code regulations</ion-item>
+    <ion-item>Membership From</ion-item>
+  </ion-list>
+</ion-content>

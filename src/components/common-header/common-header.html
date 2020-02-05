@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons *ngIf="noMenu == 'false'">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="share()">
+        <ion-icon name="md-share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>

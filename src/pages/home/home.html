@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <top-menu></top-menu>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="homeContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <!-- <div class="flexDiv">
+    <div class="centerDiv">
+      <img src="assets/imgs/commingSoon.jpg" alt="Image">
+    </div>
+  </div> -->
+  <ion-slides class="eventSlider" direction="vertical" #eventSlider>
+    <ion-slide *ngFor="let event of eventData; let i=index" (click)="forDetail(event)">
+      <ion-card class="eventCard">
+        <ion-card-content>
+          <ion-item>
+            <h5 class="eventDate">{{event.startDate}} - {{event.endDate}}</h5>
+            <h5>{{event.startTime}} - {{event.endTime}}</h5>
+            <h2>{{event.name}}</h2>
+            <h3>
+              <ion-icon name="pin"></ion-icon> {{event.location}}
+            </h3>
+            <p>{{event.desc}}</p>
+          </ion-item>
+          <div class="eventImageDiv">
+            <img src="{{event.image}}" />
+            <span>{{event.status}}</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

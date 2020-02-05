@@ -1,0 +1,141 @@
+page-photography-videography {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .pageTitle{
+        font-size: 22px;
+        margin: 1.8rem 16px 16px 16px;
+    }
+    .pageDesc{
+        font-size: 13px;
+        line-height: 20px;
+        margin: 4px 16px 0px 16px;
+    }
+    .photographyContent{
+        border-top: 2px dashed #ccc;
+        .photographyFormCard{
+            box-shadow: none;
+            width: 100%;
+            margin: 20px auto;
+            border-bottom: 1px solid #ccc;
+            padding: 16px;
+            ion-card-content{
+                padding: 0px;
+                background: #e1e1e1;
+                margin-bottom: 30px;
+            }
+            ion-list{
+                width: calc( 100% - 32px );
+                margin: 0px auto;
+                padding: 20px 0px;
+                ion-item{
+                    background: none;
+                    padding-bottom: 5px;
+                    border-bottom: 1px dashed #fff !important;
+                    .item-inner{
+                        padding-right: 16px;
+                        flex-direction: column;
+                        ion-label{
+                            font-weight: bold;
+                            margin-bottom: 6px;
+                            color: #444;
+                            margin-top: 3px;
+                            font-size: 14px;
+                            span{
+                                color: #ff0000;
+                            }
+                        }
+                        .requiredLabel{
+                            color: #ff594f;
+                            width: 100%;
+                            margin: 4px 0px 0px 0px;
+                            font-size: 13px;
+                        }
+                        ion-input, ion-textarea, ion-select, ion-datetime{
+                            background: #fff;
+                            border: 1px solid #ccc;
+                            text-indent: 8px;
+                            position: relative;
+                            font-size: 13px;
+                            color: #3c3c3c;
+                        }
+                        ion-datetime{
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                        }
+                    }
+                }
+                .item-textarea{
+                    .item-inner{
+                        padding-right: 16px;
+                        ion-textarea{
+                            textarea{
+                                text-indent: 8px;
+                            }
+                        }
+                    }
+                }
+                .captchaItem{
+                    .item-inner{
+                        flex-direction: row;
+                    }
+                    ion-label{
+                        margin-right: 0px;
+                        h3{
+                            font-weight: bold;
+                            margin-bottom: 6px;
+                            color: #444;
+                            margin-top: 3px;
+                            font-size: 14px;
+                        }
+                        .reCaptcha{
+                            > div{
+                                transform:scale(0.77); transform-origin:0 0;
+                                height: 66px !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .submitBtn{
+                margin: 0px auto;
+                display: block;
+                font-size: 14px;
+                text-transform: capitalize;
+                margin-top: 20px;
+                height: 32px;
+                background: #7b0000;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

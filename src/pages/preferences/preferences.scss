@@ -1,0 +1,200 @@
+page-preferences {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .preferenceContent{
+        .toggleItem{
+            .item-inner{
+                border-bottom: none;
+                ion-label{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+            h3{
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 100px;
+                height: 24px;
+                overflow: visible;
+                input { 
+                    opacity: 0;
+                    width: 100px;
+                    height: 24px;
+                    position: absolute;
+                    z-index: 666;
+                }
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ccc;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                    overflow: visible;
+                }
+                  
+                .slider .innerText {
+                    position: absolute;
+                    content: "";
+                    height: 24px;
+                    width: 80px;
+                    left: -16px;
+                    bottom: 0px;
+                    background: rgba(175, 175, 175, 0.6);
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 26px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        top: 0px;
+                        left: 0px;
+                        border-top: 24px solid #fff;
+                        border-right: 16px solid transparent;
+                    }
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        bottom: 0px;
+                        right:  0px;
+                        border-top: 24px solid transparent;
+                        border-right: 16px solid #ccc;
+                    }
+                }
+                  
+                input:checked + .slider {
+                    background-color: #dedede;
+                }
+                  
+                input:focus + .slider {
+                    box-shadow: 0 0 1px #dedede;
+                }
+                  
+                input:checked + .slider {                    
+                    .innerText {
+                        -webkit-transform: translateX(50px);
+                        -ms-transform: translateX(50px);
+                        transform: translateX(50px);
+                        background: #8f1336;
+                        &::before{
+                            border-top: 24px solid #dedede;
+                        }
+                    }
+                }
+            }              
+        }
+        .notifiedList{
+            width: calc( 100% - 32px );
+            margin: 0px auto;
+            margin-bottom: 8vh;
+            max-height: 40vh;
+            overflow: scroll;
+            ion-item{
+                border-bottom: 1px solid #ccc !important;
+                ion-icon[item-start]{
+                    color: #8f1336;
+                }
+                .item-inner{
+                    margin-left: 10px;
+                    ion-label{}
+                    ion-checkbox{
+                        .checkbox-icon{
+                            border-width: 1px;
+                            border-color: #444;
+                            &.checkbox-checked{
+                                background: none;
+                                border-color: #444;
+                                .checkbox-inner{
+                                    border-color: #8f1336;
+                                    width: 8px;
+                                    height: 15px;
+                                    border-width: 3px;
+                                    border-top-width: 0;
+                                    border-left-width: 0;
+                                    top: -4px;
+                                    left: 6px;
+                                    filter: drop-shadow(1px 3px 5px #8f1336);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .insideNotifiedItem{
+            min-height: auto;
+            .item-inner{
+                ion-label{
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+        p.notifiedDesc{
+            width: calc( 100% - 32px );
+            margin: 0px auto;
+            color: #777;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+    ion-footer{
+        overflow: visible;
+        &::before{
+            height: 0px !important;
+        }
+        .applyBtn{
+            background: #8f1336;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 0px;
+            width: calc( 100% - 32px );
+            margin: 10px auto;
+            text-transform: inherit;
+            font-size: 15px;
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

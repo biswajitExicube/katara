@@ -1,0 +1,81 @@
+<common-header noMenu="true"></common-header>
+<ion-content padding class="childContent">
+  <h2>{{parentData.name}}</h2>
+  <ion-card>
+    <ion-card-header>
+      <img src="{{parentData.image}}" alt="Image">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="cafeLogo" *ngIf="fromPage != 'vanue'">
+        <img src="{{parentData.logo}}" alt="Image">
+      </div>
+      <p>{{parentData.description}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="linkCard" *ngIf="fromPage == 'vanue'">
+      <ion-card-header>
+        Venue Category
+      </ion-card-header>
+      <ion-card-content>
+        <p>Visual Arts</p>
+      </ion-card-content>
+    </ion-card>
+  <ion-card class="linkCard" *ngIf="fromPage != 'vanue'">
+    <ion-card-header>
+      Restaurant link
+    </ion-card-header>
+    <ion-card-content>
+      <a href="http://www.ardcanaan.com/">http://www.ardcanaan.com/</a>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-card class="linkCard" *ngIf="fromPage != 'vanue'">
+    <ion-card-header>
+      Community link
+    </ion-card-header>
+    <ion-card-content>
+      <a href="http://www.ardcanaan.com/">http://www.ardcanaan.com/</a>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="linkCard" *ngIf="fromPage != 'vanue'">
+    <ion-card-header>
+      Planetarium link
+    </ion-card-header>
+    <ion-card-content>
+      <a href="http://www.ardcanaan.com/">http://www.ardcanaan.com/</a>
+      <span class="noItemSpan">There are no items to show.</span>
+    </ion-card-content>
+  </ion-card> -->
+  <ion-card class="linkCard addressCard">
+    <ion-card-header>
+      Contact
+    </ion-card-header>
+    <ion-card-content>
+      <p>Tel:
+        <span class="inlineSpan">
+          <span>+974 44 08 08 11</span>
+          <span>+974 44 08 08 33</span>
+        </span>
+      </p>
+      <p>Email:
+        <span class="inlineSpan">info@ardcanaan.com</span>
+      </p>
+      <p>www.ardcanaan.com</p>
+      <p>+97444080811</p>
+      <a href="mailTo:info@ardcanaan.com">info@ardcanaan.com</a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="pin"></ion-icon>
+        <span>Take me there</span>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="call"></ion-icon>
+        <span>Call</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

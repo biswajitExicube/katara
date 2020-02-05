@@ -1,0 +1,13 @@
+<ion-content class="modalContent">
+  <div class="coverPage" (click)="closeModal()"></div>
+  <div class="parentDiv">
+    <div class="childDiv">
+      <ion-card class="modalCard">
+        <ion-item>
+          <ion-textarea rows="12" placeholder="Write your comment here"></ion-textarea>
+        </ion-item>
+        <button block ion-button (click)="saveComment()">Save</button>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

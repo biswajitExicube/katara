@@ -1,0 +1,134 @@
+page-event-detail {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .eventDetailContent{
+        .detailCard{
+            width: 100%;
+            margin: 0px auto;
+            box-shadow: none;
+            border-radius: 0px;
+            .eventImgDiv{
+                position: relative;
+                margin-bottom: 10px;
+                span{
+                    background: #8f1336;
+                    display: inline-block;
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-size: 13px;
+                    padding: 4px 6px;
+                    border-radius: 20px;
+                    position: absolute;
+                    bottom: -6px;
+                    right: 15px;
+                }
+            }
+            ion-card-content{
+                padding: 0px;
+                ion-item{
+                    .item-inner{
+                        ion-label{
+                            white-space: normal;
+                        }
+                    }
+                }
+                .eventDate{
+                    background: #8f1336;
+                    display: inline-block;
+                    color: #fff;
+                    padding: 4px 2px;
+                    font-size: 12px;
+                }
+                h5{
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                h2{
+                    font-size: 22px;
+                    color: #333;
+                    margin: 10px 0;
+                    // font-weight: 600;
+                }
+                h3{
+                    color: #444;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-family: 'Museo-300-Regular';
+                    ion-icon{
+                        color: #8f1336;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 6px;
+                        font-size: 22px;
+                    }
+                }
+                p{
+                    color: #444;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin: 10px 0px 0px 0px;
+                }
+            }
+        }
+    }
+    ion-footer{
+        background: #fff;
+        ion-grid.grid{
+            padding: 0px;
+            ion-row{
+                border-top: 1px dashed #ccc;
+                ion-col.col{
+                    text-align: center;
+                    border-right: 1px solid #ccc;
+                    font-size: 14px;
+                    &:last-child{
+                        border-right: none;
+                    }
+                    ion-icon{
+                        display: block;
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+        .statusBtn{
+            text-transform: capitalize;
+            border-radius: 0px;
+            margin: 0px;
+            background: #8f1336;
+            .button-inner{
+                font-family: 'Museo-300-Regular';
+                font-weight: bold;
+            }
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

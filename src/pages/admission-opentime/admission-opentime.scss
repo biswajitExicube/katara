@@ -1,0 +1,117 @@
+page-admission-opentime {
+    .customHeader{
+        border-bottom: 1px solid #ccc;
+        .back-button{
+            display: block;
+        }
+        ion-buttons{
+            button{
+                color: #333;
+            }
+        }
+        ion-navbar.toolbar-ios{
+            padding-top: 8px !important;
+        }
+    }
+    .hasHeader{
+        ion-header{
+            top:54px;
+            border-top: 1px solid #ccc;
+            ion-navbar.toolbar-ios{
+                padding-top: 4px;
+            }
+        }
+    }
+    
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .pageTitle{
+        font-size: 22px;
+        margin-bottom: 0px;
+    }
+    .admissionContent{
+        .segmentDiv{
+            justify-content: flex-start;
+            margin-top: 60px;
+            border-bottom: 2px solid #444;
+            .segment-button{
+                flex: initial;
+                width: auto;
+                color: #444;
+                background: none;
+                border: none;
+                border-radius: 0px;
+                border-right: 1px solid #555;
+                border-left: 1px solid #555;
+                height: auto;
+                line-height: 26px;
+                border-bottom: none;
+                margin-left: 2px;
+                padding: 0px 3px;
+                text-transform: capitalize;
+                &.segment-activated{
+                    background: #8f1336;
+                    color: #fff;
+                    border: none;
+                }
+                &:first-child{
+                    border-left: 0px;
+                    margin-left: 0px;
+                }
+            }
+        }
+        .segmentSwitchDiv{
+            ion-list{
+                border-bottom: 1px solid #dadada;
+                ion-item{
+                    padding-left: 0px;
+                    .item-inner{
+                        padding-right: 0px;
+                        ion-label{
+                            margin-right: 0px;
+                            white-space: normal;
+                            p{
+                                line-height: 22px;
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .changeDir.admissionContent .segmentDiv .segment-button{
+        margin-left: 0px;
+        margin-right: 2px;
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

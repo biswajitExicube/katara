@@ -1,0 +1,29 @@
+top-menu {
+    .topMenu{
+        padding-left: 0px;
+        margin: 0px;
+        width: 100%;
+        overflow: scroll;
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            color: #333333;
+            margin-right: 10px;
+            text-align: center;
+            font-weight: normal;
+            img{
+                display: block;
+                width: 20px;
+                margin: 0px auto;
+                margin-bottom: 5px;
+            }
+        }
+        &::-webkit-scrollbar {
+            height: 0px;
+        }
+        &::-webkit-scrollbar-thumb {
+            height: 0px;
+        }
+    }
+}

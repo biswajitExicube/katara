@@ -1,0 +1,18 @@
+<common-header noMenu="false"></common-header>
+
+<ion-content padding class="restaurantContent"  [ngClass]="changeDir? 'changeDir' : ''">
+  <h2 class="pageTitle">{{'Restaurants & Cafes' | translate}}</h2>
+  <p class="pageDesc">Carefully situated for a spectacular sea view, Katara gathered the finest international restaurants under its roof to offer visitors a splendid taste of scrumptious diversity of culinary arts. In this restaurant area, nations are given the opportunity to showcase their unique culinary culture to all those eagar to tease their taste buds with original flavors and outstanding cusines. No need for you renowned cuisines. At Katara we bring the culinary world to you through an array of amazing restaurants and cafes.</p>
+  <ion-card *ngFor="let restaurant of restaurantList; let i=index" (click)="forDetails(restaurant)">
+    <ion-card-header>
+      <img src="{{restaurant.image}}" alt="Image">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="cafeLogo">
+        <img src="{{restaurant.logo}}" alt="Image">
+      </div>
+      <h2>{{restaurant.name}}</h2>
+      <p>{{restaurant.description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

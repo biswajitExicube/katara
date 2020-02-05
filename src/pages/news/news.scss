@@ -1,0 +1,162 @@
+page-news {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .pageTitle{
+        font-size: 22px;
+        margin-bottom: 0px;
+        padding-left: 16px;
+    }
+    .newsContent{
+        .newsItem{
+            h2{
+                color: #c37600;
+                font-size: 17px;
+                line-height: 22px;
+                // font-weight: bold;
+                margin-top: 8px;
+            }
+            h4{
+                font-size: 12px;
+                color: #555;
+                margin: 8px 0px;
+                // font-weight: bold;
+            }
+            p{
+                color: #333;
+                font-size: 14px;
+                line-height: 22px;
+                // font-weight: 600;
+            }
+        }
+        .featuredNewsCard{
+            background: #e0e0e0;
+            width: 100%;
+            margin: 0px auto;
+            margin-top: 15px;
+            ion-card-content{
+                padding-bottom: 6px;
+            }
+            ion-slides{
+                .swiper-container{
+                    .swiper-pagination{
+                        top: inherit;
+                        bottom: 0px;
+                        background: #fff;
+                        border-radius: 40px;
+                        overflow: hidden;
+                        text-align: left;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        height: 6px;
+                        .swiper-pagination-progressbar{
+                            background: #5d5d5d;
+                            border-radius: 40px;
+                        }
+                        button.swiper-pagination-bullet{
+                            // float: left;
+                            // width: 20px;
+                            border-radius: 20px;
+                            height: 6px;
+                            margin: 0px;
+                            background: none;
+                        }
+                        button.swiper-pagination-bullet.swiper-pagination-bullet-active{
+                            background: #5d5d5d;
+                        }
+                    }
+                    ion-slide{
+                        padding-bottom: 25px;
+                        .slide-zoom{
+                            text-align: left;
+                            // font-weight: bold;                            
+                        }
+                    }
+                }
+            }
+        }
+        .allNewsCard{
+            width: 100%;
+            margin: 0px auto;
+            box-shadow: none;
+            margin-top: 15px;
+            h3{
+                color: #444;
+                margin: 16px;
+                font-size: 18px;
+                // font-weight: 600;
+            }
+            ion-card-header{
+                padding: 0px 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                .searchInput{                    
+                    border: 1px solid #ccc;
+                    height: 32px;
+                    width: 50%;
+                    ion-input, button{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    ion-input{
+                        width: calc( 100% - 35px );
+                        text-indent: 8px;
+                        input{
+                            width: calc( 100% - 14px );
+                            margin: 6px 0px;
+                        }
+                    }
+                    button{
+                        background: none;
+                        line-height: 30px;
+                        font-size: 24px;
+                        padding: 0px 4px;
+                        color: #444;
+                        border-left: 1px solid #ccc;
+                        ion-icon{
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+            .showAllBtn{
+                background: #8f1336;
+                height: 32px;
+                // font-weight: 600;
+                font-size: 14px;
+                text-transform: capitalize;
+            }
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

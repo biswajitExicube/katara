@@ -1,0 +1,145 @@
+page-car-finder {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .pageTitle{
+        font-size: 22px;
+        margin-bottom: 0px;
+    }
+    .pageDesc{
+        text-align: center;
+        width: 96%;
+        margin: 30px auto;
+        line-height: 22px;
+        color: #696868;
+    }
+    .carFinderContent{
+         /*background: rgba(0, 0, 0, 0.3);
+        .coverPage{
+            position: absolute;
+            z-index: 222;
+            width: 100%;
+            height: 100%;
+        }        
+        ion-card{
+            width: 96%;
+            margin: 0px auto;
+            border-radius: 2px;
+            box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 666;
+            ion-card-header{
+                background: #8f1336;
+                color: #fff;
+                font-size: 20px;
+            }
+            .card-content{
+                padding: 13px 0px;
+                ion-avatar{
+                    text-align: center;
+                    ion-icon{
+                        font-size: 50px;
+                        color: #8f1336;
+                    }
+                }
+                ion-label{
+                    white-space: normal;
+                    h2{
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+                ion-item:last-child{
+                    border-top: 1px dashed #ccc;
+                }
+                .parkCommentingDiv{
+                    width: calc( 100% - 70px );
+                    margin-bottom: 6px;
+                    padding-right: 16px;
+                    float: right;
+                    ion-textarea{
+                        resize: none;
+                        border-bottom: 1px solid #0090CE;
+                    }
+                    .parkBtnSpan{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        button{
+                            background: #8f1336;
+                            text-transform: capitalize;
+                            border-radius: 0px;
+                            border: none;
+                            margin: 8px 6px;
+                            padding: 4px 8px;
+                        }
+                    }
+                }
+            }
+        }*/
+        .parkingCard{
+            width: 92%;
+            margin: 20px auto;
+            padding: 6px;
+            border-radius: 2px;
+            box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.2);
+            ion-item{
+                border-bottom: 1px solid #a9a9a9;
+                .item-inner{
+                    ion-label{
+                        white-space: normal;
+                        h2{
+                            font-size: 20px;
+                            margin-bottom: 20px;
+                            font-family: 'Museo-300-Regular';
+                            ion-icon{
+                                font-size: 50px;
+                                color: #8f1336;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-right: 10px;
+                            }
+                        }
+                        p{
+                            text-align: center;
+                            font-family: 'Museo-300-Regular';
+                            font-size: 14px;
+                            color: #444;
+                        }
+                    }
+                }
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

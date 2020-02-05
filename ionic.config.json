@@ -1,0 +1,7 @@
+{
+  "name": "katara",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

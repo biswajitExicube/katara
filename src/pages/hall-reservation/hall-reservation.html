@@ -1,0 +1,64 @@
+<ion-header class="customHeader">
+    <ion-navbar hideBackButton>
+      <ion-buttons>
+          <button ion-button icon-only (click)="back()">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-navbar>
+  </ion-header>
+  <common-header noMenu="false" class="hasHeader"></common-header>
+
+  
+<ion-content padding class="hallReserveContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <h2 class="pageTitle">Katara Hall Reservation</h2>
+  <ion-card class="hallReserveFormCard">
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label stacked>Requester Name <span>*</span></ion-label>
+        <ion-input type="text" [(ngModel)]="requesterName"></ion-input>
+        <h2 stacked item-end *ngIf="requesterNameError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Requester Email</ion-label>
+        <ion-input type="email" [(ngModel)]="requesterEmail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Requester Mobile No. <span>*</span></ion-label>
+        <ion-input type="tel" [(ngModel)]="requesterMobileNo"></ion-input>
+        <h2 stacked item-end *ngIf="requesterMobileNoError" class="requiredLabel">This field is required</h2>
+        <h2 stacked item-end *ngIf="requesterMobileNoLengthError" class="requiredLabel">Please enter a valid phone number</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Requester Date From <span>*</span></ion-label>
+        <ion-input type="date" [(ngModel)]="requestStartDate" [min]="today"></ion-input>
+        <h2 stacked item-end *ngIf="requestStartDateError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Requester Date To <span>*</span></ion-label>
+        <ion-input type="date" [(ngModel)]="requestEndDate" [min]="today"></ion-input>
+        <h2 stacked item-end *ngIf="requestEndDateError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Reasons for the request <span>*</span></ion-label>
+        <ion-textarea [(ngModel)]="reasonRequest" rows="12"></ion-textarea>
+        <h2 stacked item-end *ngIf="reasonRequestError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Location <span>*</span></ion-label>
+        <ion-select [(ngModel)]="location">
+          <ion-option value="select">Select</ion-option>
+          <ion-option value="zimbabwe">Zimbabwe</ion-option>
+          <ion-option value="zambia">Zambia</ion-option>
+        </ion-select>
+        <h2 stacked item-end *ngIf="locationError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item class="captchaItem">
+        <h3 stacked>Verification Code</h3>
+      <re-captcha class="reCaptcha" (resolved)="captchaResolved($event)" siteKey="6LfxtL0UAAAAAGbbU0iJgfNYmHuy-kJKogJ1PW3d"></re-captcha>
+      </ion-item>
+      <button ion-button color="danger" type="submit" class="submitBtn" (click)="formSubmit()">Submit</button>
+    </ion-list>
+  </ion-card>
+</ion-content>

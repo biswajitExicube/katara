@@ -1,0 +1,43 @@
+<ion-header class="customHeader">
+    <ion-navbar hideBackButton>
+      <ion-buttons>
+          <button ion-button icon-only (click)="back()">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-navbar>
+  </ion-header>
+  <common-header noMenu="false" class="hasHeader"></common-header>
+
+  
+<ion-content padding class="getingContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <h2 class="pageTitle">Getting Here</h2>
+  <p class="pageDesc">Find your way</p>
+  <img src="assets/imgs/map.jpg" alt="Map" style="margin-bottom: 30px;">
+  <h2 class="pageTitle">Parking Slots</h2>
+  <p class="pageDesc">Find current available parking slots</p>
+  <h2 class="pageTitle">Underground parking</h2>
+  <img src="assets/imgs/parking-data.jpg" alt="Parking Image" style="margin-top: 10px;margin-bottom: 30px;">
+  <ion-card class="routeCard">
+    <ion-card-content>
+      <div class="routeDiv">
+        <div>
+          <ion-icon name="md-bus"></ion-icon>
+          <h3>By Bus</h3>
+          <p>Details for Bus Route</p>
+        </div>
+        <div>
+          <ion-icon name="ios-car"></ion-icon>
+          <h3>By Car</h3>
+          <p>Details for Car Route</p>
+        </div>
+        <div>
+          <ion-icon name="md-bicycle"></ion-icon>
+          <h3>By Bicycle</h3>
+          <p>Details for Bicycle Route</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

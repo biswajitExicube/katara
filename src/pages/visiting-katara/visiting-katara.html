@@ -1,0 +1,48 @@
+<common-header  noMenu="false"></common-header>
+
+<ion-content class="visitKataraContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="innerDiv" (click)="visitPage('admission')">
+          <ion-icon name="ios-clipboard"></ion-icon>
+          <span>{{'admissionOpenning' | translate}}</span>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="innerDiv" (click)="visitPage('around')">
+          <ion-icon name="ios-clipboard"></ion-icon>
+          <span>{{'gettingAround' | translate}}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="innerDiv" (click)="visitPage('hall','https://katara.net/en/Visiting/Hall-Reservation-MobileApp/')">
+          <ion-icon name="ios-clipboard"></ion-icon>
+          <span>{{'kataraHallReserve' | translate}}</span>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="innerDiv" (click)="visitPage('venues')">
+          <ion-icon name="ios-clipboard"></ion-icon>
+          <span>{{'kataraVenueLandmarks' | translate}}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="innerDiv" (click)="visitPage('photography','https://katara.net/Visiting/Visitor-Photography-MobileApp/')">
+          <ion-icon name="ios-clipboard"></ion-icon>
+          <span>{{'visitorPhotography' | translate}}</span>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="innerDiv" (click)="visitPage('volunteer')">
+          <ion-icon name="ios-clipboard"></ion-icon>
+          <span>{{'volunteerClub' | translate}}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

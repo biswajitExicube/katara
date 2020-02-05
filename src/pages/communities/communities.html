@@ -1,0 +1,17 @@
+<common-header noMenu="false"></common-header>
+  
+  <ion-content padding class="communitiesContent" [ngClass]="changeDir? 'changeDir' : ''">
+    <h2 class="pageTitle">{{'Communities' | translate}}</h2>
+    <ion-card *ngFor="let community of communitiesList; let i=index" (click)="forDetails(community)">
+      <ion-card-header>
+        <img src="{{community.image}}" alt="Image">
+      </ion-card-header>
+      <ion-card-content>
+        <div class="cafeLogo">
+          <img src="{{community.logo}}" alt="Image">
+        </div>
+        <h2>{{community.name}}</h2>
+        <p>{{community.description}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

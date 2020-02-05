@@ -1,0 +1,36 @@
+<ion-header class="customHeader">
+    <ion-navbar hideBackButton>
+      <ion-buttons>
+          <button ion-button icon-only (click)="back()">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-navbar>
+  </ion-header>
+  <common-header noMenu="false" class="hasHeader"></common-header>
+
+  
+<ion-content padding class="venueContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <h2 class="pageTitle">Venues & Landmarks</h2>
+  <ion-card *ngFor="let venue of venuesList; let i=index" class="venueCard" (click)="forDetails(venue)">
+    <img src="{{venue.image}}" alt="Image">
+    <ion-card-content>
+      <h3>{{venue.title}}</h3>
+      <p>{{venue.desc}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer [ngClass]="changeDir? 'changeDir' : ''">
+  <button ion-button block class="filterBtn" [ngClass]="filterOpen==true?'btnActive':''" (click)="filterBtnClick()">
+    <ion-icon name="ios-funnel"></ion-icon>
+    Filters
+  </button>
+  <ion-list class="selectList" [ngClass]="filterOpen==true?'listActive':''" no-lines>
+    <button class="closeBtn" (click)="closeList()"><ion-icon name="md-close"></ion-icon></button>
+    <ion-list-header>By Category</ion-list-header>
+    <ion-item (click)="filterItem('all')">All</ion-item>
+    <ion-item (click)="filterItem('performence')">Performing Arts</ion-item>
+    <ion-item (click)="filterItem('visual')">Visual Arts</ion-item>
+  </ion-list>
+</ion-footer>

@@ -1,0 +1,274 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'Museo-300-Regular';
+    src: url('../assets/fonts/Museo300-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Museo300-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    // font-family: 'Museo-300-Regular';
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.parentDiv{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .childDiv{
+        width: 100%;
+    }
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, 
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.item-input-has-focus .item-inner,
+.item-md.item-input.input-has-focus .item-inner{
+    box-shadow: none !important;
+    border: none !important;
+}
+.toolbar-ios{
+    height: 56px;
+}
+ion-header{
+    ion-navbar{
+        .toolbar-background{
+            background: #fff;
+            border: none !important;
+        }
+        button{
+            width: 34px;
+            min-width: auto !important;
+            ion-icon{
+                // color: #8f1336;
+            }
+        }
+        button[menutoggle]{
+            .button-inner{
+                ion-icon{
+                    position: relative;
+                    background: url('../assets/imgs/menuToggle.png') no-repeat center center;
+                    background-size: 90%;
+                    width: 100%;
+                    &::before{
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+ion-menu{
+    top: 56px;
+    height: calc( 100% - 56px );
+    .menu-inner{
+        box-shadow: none !important;
+    }
+}
+ion-app.ios{
+    ion-menu{
+        top: 72px;
+    }
+}
+.menuContent{
+    position: relative;
+    .menuLogo{
+        width: 140px;
+        margin: 0px auto;
+        display: block;
+    }
+    .menuList{
+        height: calc( 100% - 60px );
+        overflow-y: scroll;
+        margin-bottom: 0px;
+        button{
+            .item-inner{
+                border-bottom: 1px dashed #ccc;
+                ion-label{
+                    color: #424242;
+                    font-size: 15px;
+                    ion-icon{
+                        color: #8f1336;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+        ion-item{
+            .item-inner{
+                border-bottom: 1px dashed #ccc;
+                padding-right: 0px;
+                ion-label{
+                    margin-bottom: 3px;
+                    margin-right: 0px;
+                    h3{
+                        color: #424242;
+                        margin-bottom: 13px;
+                        font-size: 15px;
+                        padding-left: 16px;
+                    }
+                    > span{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-around;
+                        align-items: center;
+                        // padding-top: 6px;
+                        // border-top: 1px dashed #ccc;
+                        padding-bottom: 4px;
+                        a{
+                            color: #8f1336;
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+        .outerItem{
+            .item-inner{
+                ion-label{
+                    margin-left: 16px;
+                }
+            }
+        }
+        .langItem{
+            text-align: right;
+        }
+    }
+    &.changeDir{  
+        .menuList button .item-inner ion-label ion-icon{
+            margin-right: 0px;
+            margin-left: 8px;
+        }
+        ion-item .item-inner{
+            padding-right: 8px;
+            ion-label{
+                margin-right: 8px;                
+            }
+        }
+        .langItem{
+            text-align: left;
+        }
+    }
+}
+ion-action-sheet{
+    height: calc( 100% - 34px ) ;
+}
+common-header[noMenu="true"]{
+    .back-button{
+        display: block;
+    }
+}
+.back-button{
+    ion-icon{
+        color: #bbb;
+    }
+}
+.back-button-text{
+    display: none;
+}
+.changeDir{
+    direction: rtl;
+    text-align: right !important;
+}
+.backDateAlert{
+    .alert-head, .alert-button-group{
+        display: none;
+    }
+    .alert-message{
+        padding: 15px;
+        color: #444;
+        font-family: 'Museo-300-Regular';
+        font-weight: 600;
+        text-align: center;
+    }
+}
+.customLoading{
+    .loading-wrapper{
+        // background: none;
+        text-align: center;
+        flex-direction: column;
+        padding: 20px;
+        .loading-spinner{
+            ion-spinner{
+                font-size: 18px;
+            }
+        }
+        .loading-content{
+            display: block;
+            margin-left: 0px;
+            p{
+                font-size: 20px;
+                color: #444;
+                font-family: 'Museo-300-Regular';
+                font-weight: 600;
+                text-align: center;
+                margin: 0px;
+            }
+        }
+    }
+}
+
+@media screen 
+and (min-device-width : 414px) 
+and (min-device-height :   896px) 
+and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+    ion-app.ios{
+        ion-menu{
+            top: 80px;
+            ion-content{
+                .scroll-content{
+                    padding-top: 20px !important;
+                }
+            }
+        }    
+    }
+}
+@media screen 
+and (min-device-width : 375px) 
+and (min-device-height : 812px) 
+and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+    ion-app.ios{
+        ion-menu{
+            top: 80px;
+            ion-content{
+                .scroll-content{
+                    padding-top: 20px !important;
+                }
+            }
+        }    
+    }   
+}
+@media screen 
+and (min-device-width : 414px) 
+and (min-device-height :   896px) 
+and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+    ion-app.ios{
+        ion-menu{
+            top: 80px;
+            ion-content{
+                .scroll-content{
+                    padding-top: 20px !important;
+                }
+            }
+        }    
+    }
+}

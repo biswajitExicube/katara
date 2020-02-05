@@ -1,0 +1,95 @@
+<ion-header class="customHeader">
+    <ion-navbar hideBackButton>
+      <ion-buttons>
+          <button ion-button icon-only (click)="back()">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-navbar>
+  </ion-header>
+  <common-header noMenu="false" class="hasHeader"></common-header>
+
+<ion-content class="valunteerContent">
+  <h2 class="pageTitle">Volunteers Club</h2>
+  <ion-card class="volunteerFormCard">
+    <!-- <ion-list no-lines>
+      <ion-item>
+        <ion-label stacked>Full Name <span>*</span></ion-label>
+        <ion-input type="text" [(ngModel)]="firstName"></ion-input>
+        <h2 stacked item-end *ngIf="firstNameError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Requester Email <span>*</span></ion-label>
+        <ion-input type="email" [(ngModel)]="requesterEmail"></ion-input>
+        <h2 stacked item-end *ngIf="requesterEmailError" class="requiredLabel">This field is required</h2>
+        <h2 stacked item-end *ngIf="emailValidateError" class="requiredLabel">Please enter a valid EMail address</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Mobile No. <span>*</span></ion-label>
+        <ion-input type="tel" [(ngModel)]="mobileNo"></ion-input>
+        <h2 stacked item-end *ngIf="mobileNoError" class="requiredLabel">This field is required</h2>
+        <h2 stacked item-end *ngIf="mobileLengthError" class="requiredLabel">Please enter a valid phone number</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>ID No. <span>*</span></ion-label>
+        <ion-input type="tel" [(ngModel)]="IDNo"></ion-input>
+        <h2 stacked item-end *ngIf="IDNoError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Birthday <span>*</span></ion-label>
+        <ion-input type="date" [(ngModel)]="birthday" [min]="today"></ion-input>
+        <h2 stacked item-end *ngIf="birthdayError" class="requiredLabel">This field is required</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Gender <span>*</span></ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="select">Select</ion-option>
+          <ion-option value="female">Female</ion-option>
+          <ion-option value="male">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Nationality <span>*</span></ion-label>
+        <ion-select [(ngModel)]="nationality">
+          <ion-option value="select">Select</ion-option>
+          <ion-option value="zimbabwe">Zimbabwe</ion-option>
+          <ion-option value="zambia">Zambia</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Area of Interest</ion-label>
+        <ion-textarea [(ngModel)]="interestArea" rows="3"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Previous Experience</ion-label>
+        <ion-textarea [(ngModel)]="preExperience" rows="3"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Reasons of Volunterring</ion-label>
+        <ion-textarea [(ngModel)]="reasonVolunteer" rows="3"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Twitter Account</ion-label>
+        <ion-input type="text" [(ngModel)]="twitterAccount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Facebook Account</ion-label>
+        <ion-input type="text" [(ngModel)]="facebookAccount"></ion-input>
+      </ion-item>
+      <ion-item class="captchaItem">
+        <h3 stacked>Verification Code</h3>
+      <re-captcha class="reCaptcha" (resolved)="captchaResolved($event)" siteKey="6LfxtL0UAAAAAGbbU0iJgfNYmHuy-kJKogJ1PW3d"></re-captcha>
+      </ion-item>
+      <button ion-button color="danger" type="submit" class="submitBtn" (click)="formSubmit()">Submit</button>
+    </ion-list> -->
+    <div style="padding: 5vh 10px; color: #ff0000; font-size: 20px; text-align: center;">Volunteers Club Form to be open from Katara website.</div>
+  </ion-card>
+  <ion-list class="quickLinkList" no-lines>
+    <ion-list-header>Quick Links</ion-list-header>
+    <ion-item (click)="about()">About Katara</ion-item>
+    <ion-item (click)="upcomingDev()">Upcoming Development</ion-item>
+    <ion-item (click)="strategicPartner()">Strategic Partners</ion-item>
+    <ion-item (click)="career()">Careers</ion-item>
+  </ion-list>
+</ion-content>

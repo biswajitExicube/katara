@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{this.calenderList? catList: catList.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="categoryContent">
+  <ion-card *ngFor="let item of happenArr; let i=index" (click)="goDetail(item)">
+    <ion-card-header>
+      <img src="{{item.image}}" alt="Image">
+      <span>{{item.status}}</span>
+    </ion-card-header>
+    <ion-card-content>
+      <h5>{{item.type}}</h5>
+      <h3>{{item.name}}</h3>
+      <h4>{{item.startDate}} - {{item.endDate}}</h4>
+      <p>{{item.startTime}} - {{item.endTime}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

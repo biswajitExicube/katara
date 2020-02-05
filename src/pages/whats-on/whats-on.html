@@ -1,0 +1,100 @@
+<common-header  noMenu="false"></common-header>
+
+<ion-content class="WOContent"  [ngClass]="changeDir? 'changeDir' : ''">
+  <h2 class="pageTitle">{{"What's On" | translate}}</h2>
+  <ion-segment class="segmentDiv" [(ngModel)]="WOSegemnt" (ionChange)="onSegmentChanged($event)">
+    <ion-segment-button value="happen">
+      {{'happenNow' | translate}}
+    </ion-segment-button>
+    <ion-segment-button value="category">
+      {{'category' | translate}}
+    </ion-segment-button>
+    <!-- <ion-segment-button value="ageGroup">
+      Age Group
+    </ion-segment-button> -->
+    <ion-segment-button value="date">
+      {{'date' | translate}}
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-slides #mySlider (ionSlideDidChange)="onSlideChanged()" [dir]="changeDir? 'rtl':'ltr'">
+    <ion-slide>
+      <div class="happenText">
+        {{!showUpcomming? 'today' : 'Upcomming'}}
+      </div>
+      <!-- <div class="happenText" *ngIf="!showUpcomming">Upcomming</div> -->
+      <div class="innerHappen">
+        <ion-card *ngFor="let item of todayList; let i=index" (click)="goDetail('happen',item)">
+          <ion-card-header>
+            <img src="{{item.image}}" alt="Image">
+            <span>{{item.status}}</span>
+          </ion-card-header>
+          <ion-card-content>
+            <h5>{{item.type}}</h5>
+            <h3>{{item.name}}</h3>
+            <h4>{{item.startDate}} - {{item.endDate}}</h4>
+            <p>{{item.startTime}} - {{item.endTime}}</p>
+          </ion-card-content>
+        </ion-card> 
+        <div class="container">Upcomming</div> 
+        <ion-card *ngFor="let item of tommorowList; let i=index" (click)="goDetail('happen',item)" >
+          <ion-card-header>
+            <img src="{{item.image}}" alt="Image">
+            <span>{{item.status}}</span>
+          </ion-card-header>
+          <ion-card-content>
+            <h5>{{item.type}}</h5>
+            <h3>{{item.name}}</h3>
+            <h4>{{item.startDate}} - {{item.endDate}}</h4>
+            <p>{{item.startTime}} - {{item.endTime}}</p>
+          </ion-card-content>
+        </ion-card>   
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <ion-list no-lines class="categoryList">
+        <ion-item *ngFor="let category of categoryArr; let j=index" (click)="categoryDetail(category)">
+          <ion-icon name="{{category.icon}}"></ion-icon>
+          {{category.name}}
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <!-- <ion-slide>
+      <ion-list no-lines class="ageGroupList">
+        <ion-item *ngFor="let group of ageGroup; let k=index">
+          <ion-icon name="{{group.icon}}"></ion-icon>
+          {{group.name}}
+        </ion-item>
+      </ion-list>
+    </ion-slide> -->
+    <ion-slide>
+      <div class="calenderDiv">
+        <ion-calendar #calendar (onDaySelect)="onDaySelect($event)" lang="en"></ion-calendar>
+        <button ion-button block (click)="calendar.today()" class="todayBtn">Today</button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <!-- <div [ngSwitch]="WOSegemnt">
+    <ion-list *ngSwitchCase="'happen'">
+      <ion-item>
+        <h2>happen</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'category'">
+      <ion-item>
+        <h2>category</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'ageGroup'">
+      <ion-item>
+        <h2>ageGroup</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'date'">
+      <ion-item>
+        <h2>date</h2>
+      </ion-item>
+    </ion-list>
+  </div> -->
+</ion-content>

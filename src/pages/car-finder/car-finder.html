@@ -1,0 +1,52 @@
+<!-- <ion-content padding class="carFinderContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <div class="parentDiv">
+    <div class="coverPage" (click)="closeModal()"></div>
+    <ion-card>
+      <ion-card-header>{{'options' | translate}}</ion-card-header>
+      <ion-card-content>
+        <ion-list no-lines>
+          <ion-item (click)="savePark()">
+            <ion-avatar item-start>
+              <ion-icon name="pin"></ion-icon>
+            </ion-avatar>
+            <h2>{{'saveMyPark' | translate}}</h2>
+            <p>Save your current location as a parking locaton of your car</p>
+          </ion-item>
+          <div class="parkCommentingDiv" *ngIf="isSavePark">
+            <ion-textarea [(ngModel)]="saveParkComment" row="3" placeholder="Comment(Optional)"></ion-textarea>
+            <span class="parkBtnSpan">
+              <button ion-button class="parkBtn" (click)="parkMsgDelete()">{{'cancel' | translate}}</button>
+              <button ion-button class="parkBtn" (click)="parkMsgSave()">{{'save' | translate}}</button>
+            </span>
+          </div>
+          <ion-item (click)="returnCar()">
+            <ion-avatar item-start>
+              <ion-icon name="pin"></ion-icon>
+            </ion-avatar>
+            <h2>{{'returnMyCar' | translate}}</h2>
+            <p>Return to my saved car parking location</p>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content> -->
+<common-header  noMenu="false"></common-header>
+<ion-content padding class="carFinderContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <h2 class="pageTitle">Car Finder</h2>
+  <p class="pageDesc">Using 3D maps and self-notes to help you remember where you parked.</p>
+  <ion-card class="parkingCard">
+    <ion-item>
+      <h2 (click)="parkMyCar()">
+        <ion-icon name="pin"></ion-icon> I Parked here
+      </h2>
+      <p>Save your current parking location</p>
+    </ion-item>
+    <ion-item>
+      <h2 (click)="returnMyCar()">
+        <ion-icon name="pin"></ion-icon> Return to my car
+      </h2>
+      <p>Return to my saved parking location</p>
+    </ion-item>
+  </ion-card>
+</ion-content>

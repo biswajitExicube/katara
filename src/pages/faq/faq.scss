@@ -1,0 +1,76 @@
+page-faq {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .pageTitle{
+        font-size: 22px;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        margin-left: 16px;
+    }
+    .faqContent{
+        .blankDataText{
+            color: #af1108;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            line-height: 22px;
+            margin: 0px;
+            padding: 16px;
+        }
+    }
+    ion-footer{
+        overflow: visible;
+        &::before{
+            height: 0px !important;
+        }
+        .filterBtn{
+            background: #8f1336;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 0px;
+            margin: 0px;
+            text-transform: inherit;
+            font-size: 15px;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.35);
+            ion-icon{
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 8px;
+            }
+        }
+        .btnActive{
+            background: #fff;
+            color: #8f1336;
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

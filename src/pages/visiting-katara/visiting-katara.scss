@@ -1,0 +1,78 @@
+page-visiting-katara {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .visitKataraContent{
+        ion-grid{
+            padding: 0px;
+            ion-row{
+                height: 30.333vh;
+                border-bottom: 1px dashed #ccc;
+                &:last-child{
+                    border-bottom: none;
+                }
+                ion-col{
+                    border-right: 0.5px solid #e8e8e8;
+                    &:last-child{
+                        border-right: none;
+                    }
+                    .innerDiv{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100%;
+                        ion-icon{
+                            font-size: 40px;
+                            color: #8f1235;
+                        }
+                        span{
+                            color: #444;
+                            display: block;
+                            width: 80%;
+                            margin: 5px auto;
+                            text-align: center;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .changeDir.visitKataraContent ion-grid ion-row ion-col{
+        border-left: 0.5px solid #e8e8e8;
+        border-right: 0px;
+        &:last-child{
+            border-left: none;
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

@@ -1,0 +1,84 @@
+page-about {
+    ion-content{
+        top: 56px;
+        height: calc( 100% - 56px );
+    }
+    .aboutContent{
+        .bannerImg{
+            width: calc( 100% - 30px );
+            margin: 20px auto;
+            display: block;
+        }
+        .aboutDesc{
+            width: calc( 100% - 30px );
+            margin: 0px auto;
+            box-shadow: none;
+            ion-card-content{
+                padding: 0px;
+            }            
+            p{
+                color: #444;
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .quickLinkList{
+            margin-top: 10vh;
+            padding-bottom: 6vh;
+            border-bottom: 1px solid #ccc;
+            ion-list-header{
+                border-top: none;
+                font-weight: bold;
+                font-size: 18px;
+                color: #333;
+                margin-bottom: 0px;
+                ion-label{
+                    font-family: 'Museo-300-Regular';
+                }
+            }
+            ion-item{
+                font-size: 14px;
+                min-height: auto;
+                ion-label{
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    color: #222;
+                    font-weight: bold;
+                    border-bottom: 1px dashed #444 !important;
+                    padding-bottom: 3px;
+                }
+            }
+        }
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 2) { // Iphone XR
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+    @media screen 
+    and (min-device-width : 375px) 
+    and (min-device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS, X
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }   
+    }
+    @media screen 
+    and (min-device-width : 414px) 
+    and (min-device-height :   896px) 
+    and (-webkit-device-pixel-ratio : 3) { // Iphone XS Max
+        ion-content{
+            top: 80px;
+            height: calc( 100% - 80px );
+        }
+    }
+}

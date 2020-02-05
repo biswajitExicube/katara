@@ -1,0 +1,114 @@
+<common-header  noMenu="true"></common-header>
+
+<ion-content class="photographyContent">
+  <!-- <h2 class="pageTitle">Photography/ Videography Permission</h2>
+  <p class="pageDesc">- Application must be submitted at least one working day before the date of Shooting.</p>
+  <p class="pageDesc">- Maximum permit validity is one week from its issue date.</p>
+  <p class="pageDesc">- It is not allowed by law to use the taken pictures or videos for advertising and commercial
+    purposes. Also, using models is strictly forbidden.</p>
+  <p class="pageDesc">- Application is bound by this permit to provide a copy of the pictured or filmed materialto
+    Katara Management, who in turn shall not give this material to any other entity.</p>
+  <p class="pageDesc">- Application must be available at the time and place of Shooting.</p>
+  <ion-card class="photographyFormCard">
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label stacked>Name <span>*</span></ion-label>
+          <ion-input type="text" [(ngModel)]="name"></ion-input>
+          <h2 stacked item-end *ngIf="nameError" class="requiredLabel">This field is required</h2>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Job</ion-label>
+          <ion-input type="text" [(ngModel)]="job"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Company Name</ion-label>
+          <ion-input type="text" [(ngModel)]="companyName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>ID No.</ion-label>
+          <ion-input type="tel" [(ngModel)]="IDNo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Tel.</ion-label>
+          <ion-input type="tel" [(ngModel)]="telNo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Mobile <span>*</span></ion-label>
+          <ion-input type="tel" [(ngModel)]="mobileNo"></ion-input>
+          <h2 stacked item-end *ngIf="mobileNoError" class="requiredLabel">This field is required</h2>
+          <h2 stacked item-end *ngIf="mobileLengthError" class="requiredLabel">Please enter a valid phone number</h2>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>E-mail <span>*</span></ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+          <h2 stacked item-end *ngIf="emailError" class="requiredLabel">This field is required</h2>
+          <h2 stacked item-end *ngIf="emailValidateError" class="requiredLabel">Please enter a valid EMail address</h2>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Shooting Type <span>*</span></ion-label>
+          <ion-select [(ngModel)]="shootingType">
+            <ion-option value="select">Select</ion-option>
+            <ion-option value="photography">Photography</ion-option>
+            <ion-option value="video">Video</ion-option>
+          </ion-select>
+          <h2 stacked item-end *ngIf="shootingTypeError" class="requiredLabel">This field is required</h2>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Shooting Date From <span>*</span></ion-label>
+          <ion-input type="date" [(ngModel)]="startShooting" [min]="today" placeholder=" "></ion-input>
+          
+          <h2 stacked item-end *ngIf="startShootingError" class="requiredLabel">This field is required</h2>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Shooting Date To <span>*</span></ion-label>
+          <ion-input type="date" [(ngModel)]="endShooting" [min]="today"></ion-input>
+          <h2 stacked item-end *ngIf="endShootingError" class="requiredLabel">This field is required</h2>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label stacked>Purpose of Shooting <span>*</span></ion-label>
+          <ion-select [(ngModel)]="purposeShooting">
+            <ion-option value="select">Select</ion-option>
+            <ion-option value="private">Private</ion-option>
+            <ion-option value="other">Others</ion-option>
+            <ion-option value="media">Media</ion-option>
+            <ion-option value="interview">Interviews</ion-option>
+            <ion-option value="documentary">Documentary</ion-option>
+            <ion-option value="commercial">Commercial</ion-option>
+          </ion-select>
+          <h2 stacked item-end *ngIf="purposeShootingError" class="requiredLabel">This field is required</h2>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Uses of Shooting</ion-label>
+          <ion-textarea [(ngModel)]="usesShooting" rows="10"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Shooting Location</ion-label>
+          <ion-select [(ngModel)]="shootLocation">
+            <ion-option value="select">Select</ion-option>
+            <ion-option value="outDoor">Outdoor</ion-option>
+            <ion-option value="inDoor">Indoor</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Location Details</ion-label>
+          <ion-textarea [(ngModel)]="locationDetail" rows="10"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Escorts</ion-label>
+          <ion-textarea [(ngModel)]="escort" rows="10"></ion-textarea>
+        </ion-item>
+        <ion-item class="captchaItem">
+          <h3 stacked>Verification Code</h3>
+          <re-captcha class="reCaptcha" (resolved)="captchaResolved($event)"
+            siteKey="6LfxtL0UAAAAAGbbU0iJgfNYmHuy-kJKogJ1PW3d"></re-captcha>
+        </ion-item>
+        <button ion-button color="danger" type="submit" class="submitBtn" (click)="formSubmit()">Submit</button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card> -->
+  <iframe width="100%" height="100%" [src]="myurl" frameborder="0" allowfullscreen></iframe>
+</ion-content>
+<!-- <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="startShooting" min="2019-01-01" placeholder=""></ion-datetime> -->

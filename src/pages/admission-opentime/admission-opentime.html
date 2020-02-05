@@ -1,0 +1,37 @@
+<ion-header class="customHeader">
+  <ion-navbar hideBackButton>
+    <ion-buttons>
+        <button ion-button icon-only (click)="back()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+<common-header noMenu="false" class="hasHeader"></common-header>
+
+<ion-content padding class="admissionContent" [ngClass]="changeDir? 'changeDir' : ''">
+  <h2 class="pageTitle">Admission and Opening times</h2>
+  <ion-segment [(ngModel)]="segmentOptions" class="segmentDiv" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="admission">
+      Admission
+    </ion-segment-button>
+    <ion-segment-button value="openTime">
+      Opening Hours
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="segmentOptions" class="segmentSwitchDiv">
+    <ion-list *ngSwitchCase="'admission'">
+      <ion-item>
+        <p>The Cultural Village Foundation - Katara is the top tourist destination in Qatar, as the visitors will find all kinds of entertainment and luxury, in addition to various cultural messages presented through festivals and events during the year which attract people from all ages and nationalities, inside and outside of Qatar.</p>
+        <p>The opportunity to enjoy a visit to Katara is not restricted to a specific time, as Katara warmly welcomes you <b>at any moment.</b></p>
+      </ion-item>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'openTime'">
+      <ion-item>
+        
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

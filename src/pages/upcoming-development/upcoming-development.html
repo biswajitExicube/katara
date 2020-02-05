@@ -1,0 +1,35 @@
+<common-header  noMenu="false"></common-header>
+<ion-content class="upcomingDevContent" (tap)="tapContent()">
+  <h2 class="pageTitle">Upcoming Development</h2>
+  <ion-card class="devCard" (tap)="tapCard()">
+    <ion-card-content>
+      <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide *ngFor="let item of upcomingData; let i=index">
+          <div class="imgDiv">
+            <img src="{{item.image}}" alt="Image">
+          </div>
+          <div padding>
+            <h3>{{item.title}}</h3>
+            <p>{{item.desc}}</p>
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <div class="btnDiv">
+        <button type="submit" ion-button class="btnPrev" (click)="prev()">
+          <ion-icon name="ios-arrow-back"></ion-icon>
+        </button>
+        <button type="submit" ion-button class="btnNext" (click)="next()">
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </button>
+      </div>
+    </ion-card-content>
+    <div class="redDot" *ngIf="redDot"></div>
+  </ion-card>
+  <ion-list class="quickLinkList" no-lines>
+    <ion-list-header>Quick Links</ion-list-header>
+    <ion-item (click)="about()">About Katara</ion-item>
+    <ion-item (click)="volunteerClub()">Volunteers Club</ion-item>
+    <ion-item (click)="strategicPartner()">Strategic Partners</ion-item>
+    <ion-item (click)="career()">Careers</ion-item>
+  </ion-list>
+</ion-content>

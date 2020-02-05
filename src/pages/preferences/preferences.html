@@ -1,0 +1,33 @@
+<common-header  noMenu="false"></common-header>
+
+<ion-content class="preferenceContent">
+  <ion-item class="toggleItem" (click)="getNotification()">
+    <h3>{{'getNotification' | translate}}</h3>
+    <label class="switch">
+      <input type="checkbox" checked [(ngModel)]="getNotified">
+      <span class="slider round">
+        <span class="innerText">{{getNotified?('on' | translate): ('off' | translate)}}</span>
+      </span>
+    </label>
+  </ion-item>
+  <ion-list no-lines class="notifiedList">
+    <ion-item *ngFor="let notify of notifiedList; let i=index">
+        <ion-icon item-start name="{{notify.icon}}"></ion-icon>
+        <ion-label>{{notify.name}}</ion-label>
+        <ion-checkbox item-end [disabled]="!getNotified" [(ngModel)]="notify.checked" (ionChange)="updateCheckbox(notify)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-item class="toggleItem insideNotifiedItem" (click)="insideNotification()">
+    <h3>{{'insideKataraNotification' | translate}}</h3>
+    <label class="switch">
+      <input type="checkbox" checked [(ngModel)]="insideNotified">
+      <span class="slider round">
+        <span class="innerText">{{insideNotified?('on' | translate): ('off' | translate)}}</span>
+      </span>
+    </label>
+  </ion-item>
+  <p class="notifiedDesc">Within Katara Get Notified with Today Events, Offers and Alerts</p>
+</ion-content>
+<ion-footer>
+  <button ion-button block class="applyBtn" (click)="notifyApply()">{{'apply' | translate}}</button>
+</ion-footer>
